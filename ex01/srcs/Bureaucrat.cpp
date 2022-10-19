@@ -1,4 +1,5 @@
  #include "../includes/Bureaucrat.hpp"
+ #include "../includes/Form.hpp"
 
 Bureaucrat::Bureaucrat():_name("default_name"), _grade(150){
     return ;
@@ -62,6 +63,14 @@ void Bureaucrat::incrementation(){
         return ;
     }
     this->_grade = this->_grade - 1;
+}
+
+void Bureaucrat::signForm(const Form &f) const{
+    if (f.getSign())
+        std::cout << this->_name << " signed " << f.getName() << std::endl;
+    else{
+        std::cout << this->_name << " couldn’t sign " << f.getName() << " because gradeSign too low." << std::endl;
+    }
 }
 
 std::ostream & operator<<(std::ostream& o, Bureaucrat const & i){
