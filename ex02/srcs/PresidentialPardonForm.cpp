@@ -1,5 +1,8 @@
  #include "../includes/Bureaucrat.hpp"
  #include "../includes/PresidentialPardonForm.hpp"
+#include <iostream>
+#include <fstream>
+#include <string>
 
 PresidentialPardonForm::PresidentialPardonForm():Form("PresidentialPardonForm", 25, 5), _target("default_target"){
     return ;
@@ -25,6 +28,13 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const{
     if (this->getSign() == 1 && this->getGradeExec() <= executor.getGrade()){
-        
+        std::ofstream f;
+        f.open(this->_target + "_shrubbery.txt");
+        f << "\\/ \\/ \\/     \\/  \\/ \\/" << std::endl;
+        f << " |   |   |       |    |   |" << std::endl;
+        f << " \\  |   /       \\   |   /" << std::endl;
+        f << "   \\| /            \\| /" << std::endl;
+        f << "     |                | " << std::endl;
+        f.close();
     }
 }
