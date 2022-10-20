@@ -24,14 +24,20 @@ Intern& Intern::operator=(Intern const & rhs){
 
 Form* Intern::makeForm(std::string name, std::string target){
     Form *form[3] = {new PresidentialPardonForm(target), new RobotomyRequestForm(target), new ShrubberyCreationForm(target)};
+    Form* tmp = NULL;
     std::string names[3] = {"presidential request", "robotomy request", "shrubbery request"};
     for (int i = 0; i <= 2; i++){
         if (name == names[i]){
-            std::cout << "Intern creates " << target << std::endl;
-            return form[i];
+            tmp = form[i];
+        }
+        else{
+            delete form[i];
         }
     }
-    throw NameNotExistException();
+    if (tmp == NULL)
+        throw NameNotExistException();
+    std::cout << "Intern creates " << target << std::endl;
+    return tmp;
 }
 
 const char* Intern::NameNotExistException::what() const throw(){

@@ -15,6 +15,7 @@ int main( void ) {
         Bureaucrat a("name", 1);
         rrf->beSigned(&a);
         rrf->execute(a);
+        delete rrf;
     }
     catch (std::exception & e)
     {
@@ -38,6 +39,7 @@ int main( void ) {
         rrf = someRandomIntern.makeForm("shrubbery request", "Bender");
         rrf->beSigned(&a);
         rrf->execute(a);
+        delete rrf;
     }
     catch (std::exception & e)
     {
