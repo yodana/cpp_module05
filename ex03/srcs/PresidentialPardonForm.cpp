@@ -1,11 +1,11 @@
  #include "../includes/Bureaucrat.hpp"
  #include "../includes/PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm():Form("PresidentialPardonForm", 25, 5), _target("default_target"){
+PresidentialPardonForm::PresidentialPardonForm():Form("presidential request", 25, 5), _target("default_target"){
     return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target):Form("PresidentialPardonForm", 25, 5), _target(target){
+PresidentialPardonForm::PresidentialPardonForm(std::string target):Form("presidential request", 25, 5), _target(target){
     return ;
 }
 

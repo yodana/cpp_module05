@@ -3,11 +3,11 @@
 #include <cstdlib>
 #include <iostream>
 
-RobotomyRequestForm::RobotomyRequestForm():Form("RobotomyRequestForm", 72, 45), _target("default_target"){
+RobotomyRequestForm::RobotomyRequestForm():Form("robotomy request", 72, 45), _target("default_target"){
     return ;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target):Form("RobotomyRequestForm", 72, 45), _target(target){
+RobotomyRequestForm::RobotomyRequestForm(std::string target):Form("robotomy request", 72, 45), _target(target){
     return ;
 }
 

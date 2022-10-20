@@ -3,6 +3,8 @@
 #include <iostream>
 #include "../includes/Form.hpp"
 
+class Form;
+
 class Bureaucrat{
     public:
         Bureaucrat();

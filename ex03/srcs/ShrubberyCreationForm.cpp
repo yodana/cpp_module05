@@ -4,11 +4,11 @@
 #include <fstream>
 #include <string>
 
-ShrubberyCreationForm::ShrubberyCreationForm():Form("ShrubberyCreationForm", 145, 137), _target("default_target"){
+ShrubberyCreationForm::ShrubberyCreationForm():Form("shrubbery request", 145, 137), _target("default_target"){
     return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form("ShrubberyCreationForm", 145, 137), _target(target){
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form("shrubbery request", 145, 137), _target(target){
     return ;
 }
 
